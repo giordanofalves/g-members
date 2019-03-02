@@ -1,4 +1,6 @@
 # README
+[![Build Status](https://travis-ci.org/giordanofalves/gmembers.svg?branch=master)](https://travis-ci.org/giordanofalves/gmembers) [![Maintainability](https://api.codeclimate.com/v1/badges/59a660856cb75ea2307a/maintainability)](https://codeclimate.com/github/giordanofalves/gmembers/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/59a660856cb75ea2307a/test_coverage)](https://codeclimate.com/github/giordanofalves/gmembers/test_coverage)
+
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
