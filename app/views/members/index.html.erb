@@ -1,0 +1,9 @@
+<table>
+  <% @members.each do |m| %>
+    <tr>
+      <td><%= m.name %><td/>
+      <td><%= m.website.url %><td/>
+      <td><%= m.website.url_shortened %><td/>
+    </tr>
+  <% end %>
+</table>
