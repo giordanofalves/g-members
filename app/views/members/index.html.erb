@@ -1,9 +1,15 @@
-<table>
+<ul class="list-group list-group-flush">
   <% @members.each do |m| %>
-    <tr>
-      <td><%= m.name %><td/>
-      <td><%= m.website.url %><td/>
-      <td><%= m.website.url_shortened %><td/>
-    </tr>
+    <li class="list-group-item">
+       <%= link_to m.name, member_path(m) %>
+
+      <div class="pull-right">
+        <%= link_to m.website.url_shortened do %>
+          <i class="glyphicon glyphicon-link"></i>
+        <% end %>
+      </div>
+    </li>
   <% end %>
-</table>
+</ul>
+
+<%= link_to 'Add member', new_member_path %>

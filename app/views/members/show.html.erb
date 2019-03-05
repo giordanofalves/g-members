@@ -1,0 +1,7 @@
+<ul class="list-group list-group-flush">
+  <li class="list-group-item">Member: <%= @member.name %></li>
+  <li class="list-group-item">Friends: <%= @member.friends.count %></li>
+  <li class="list-group-item">URL: <%= @member.website.url %></li>
+</ul>
+
+<%= link_to 'Members', members_path %>
