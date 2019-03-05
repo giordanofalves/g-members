@@ -5,7 +5,7 @@ module Bitly
     attr_reader :token
 
     def initialize
-      @token = Rails.application.credentials[:bitly][:token]
+      @token = 'd1911342bcb4c737b97d2c6eefcf2834c1101e88'
     end
 
     def shorten(uri)
