@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api-ssl.bitly.com/v4/bitlinks
+    body:
+      encoding: UTF-8
+      string: '{"domain":"bit.ly","long_url":"https://g1.globo.com/"}'
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer d1911342bcb4c737b97d2c6eefcf2834c1101e88
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 05 Mar 2019 18:26:40 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '266'
+      Connection:
+      - keep-alive
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      X-Xss-Protection:
+      - 1; mode=blockFilter
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      Content-Security-Policy:
+      - default-src 'none
+    body:
+      encoding: UTF-8
+      string: '{"created_at":"1970-01-01T00:00:00+0000","id":"glo.bo/2EEtbTt","link":"https://glo.bo/2EEtbTt","custom_bitlinks":[],"long_url":"https://g1.globo.com/","archived":false,"tags":[],"deeplinks":[],"references":{"group":"https://api-ssl.bitly.com/v4/groups/Bj33ckMfrAZ"}}'
+    http_version: 
+  recorded_at: Tue, 05 Mar 2019 18:26:40 GMT
+recorded_with: VCR 4.0.0

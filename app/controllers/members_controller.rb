@@ -10,7 +10,9 @@ class MembersController < ApplicationController
     @member.build_website
   end
 
-  def show; end
+  def show
+    @friendship = Friendship.new
+  end
 
   def create
     @member = Member.create(member_params)
