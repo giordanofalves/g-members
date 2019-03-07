@@ -19,6 +19,15 @@ class MembersController < ApplicationController
     redirect_to members_path
   end
 
+  def search
+    response = Member.find(params[:member_id]).more_like_this
+
+    render json: {
+      results: response.results,
+      total: response.total
+    }
+  end
+
   private
 
   def set_member
