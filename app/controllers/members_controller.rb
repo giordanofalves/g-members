@@ -10,11 +10,22 @@ class MembersController < ApplicationController
     @member.build_website
   end
 
-  def show; end
+  def show
+    @friendship = Friendship.new
+  end
 
   def create
     @member = Member.create(member_params)
     redirect_to members_path
+  end
+
+  def search
+    response = Member.find(params[:member_id]).more_like_this
+
+    render json: {
+      results: response.results,
+      total: response.total
+    }
   end
 
   private

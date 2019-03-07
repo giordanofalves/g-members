@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  resources :friendships
-  root to: 'members#new'
-  resources :members, only: [:index, :new, :create]
+  root to: 'members#index'
+
+  resources :members, only: [:index, :show, :new, :create] do
+    get 'search'
+  end
+
+  resources :friendships, only: :create
 end

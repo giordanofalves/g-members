@@ -1,0 +1,14 @@
+<ul class="list-group list-group-flush">
+  <li class="list-group-item">Member: <%= @member.name %></li>
+  <li class="list-group-item">Friends: <%= @member.friends.count %></li>
+  <li class="list-group-item">URL: <%= @member.website.url %></li>
+  <li class="list-group-item">
+    <%= simple_form_for @friendship do |f| %>
+      <%= f.input :friend_id, collection: @member.not_friends %>
+      <%= f.hidden_field :member_id, value: @member.id %>
+      <%= f.button :submit, 'Add friend' %>
+    <% end %>
+  </li>
+</ul>
+
+<%= link_to 'Members', members_path %>

@@ -4,10 +4,8 @@ class Website < ApplicationRecord
   belongs_to :member
   has_many :headings, dependent: :destroy
 
-  validates :url, :url_shortened, presence: true
-
-  before_validation :shorten_url
-  after_create :map_headings
+  before_create :shorten_url
+  before_create :map_headings
 
   def shorten_url
     bitly = Bitly::API.new
@@ -18,6 +16,6 @@ class Website < ApplicationRecord
     content  = content(url)
     headings = mapper(content)
 
-    self.headings.create(headings)
+    self.headings.build(headings)
   end
 end
